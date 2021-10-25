@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="formStyle.css">
+<script src="customerSatisfactionSurvey.js"></script>
+<h1 id="title">Questionnaire de satisfaction Air France</h1>
+<div id="form-outer">
+    <p id="description">
+        Pour nous permettre de nous améliorer
+    </p>
+    <form id="customer-satisfaction-survey" method="GET">
+        <div class="rowTab">
+            <div class="labels">
+                <label id="name-label" for="name">* Nom: </label>
+            </div>
+            <div class="rightTab">
+                <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Votre nom de famille" required>
+            </div>
+        </div>
+        <div class="rowTab">
+            <div class="labels">
+                <label id="email-label" for="email">* Email: </label>
+            </div>
+            <div class="rightTab">
+                <input type="email" name="email" id="email" class="input-field" required placeholder="Votre Email">
+            </div>
+        </div>
+        <div class="rowTab">
+            <div class="labels">
+                <label id="number-label">* Age: </label>
+            </div>
+            <div class="rightTab">
+                <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+            </div>
+        </div>
+        <div class="rowTab">
+            <div class="labels">
+                <label>A quel point êtes vous satisfait d'air france ?</label>
+            </div>
+            <div class="rightTab">
+                <select id="dropdown" name="satisfactionLevel" class="dropdown">
+                    <option disabled value>Sélectionnez une réponse:</option>
+                    <option  value="verySatisfied">Très satisfait</option>
+                    <option value="satisfied">Satisfait</option>
+                    <option value="somewhatSatisfied">Mitiger</option>
+                    <option value="notSatisfied">Mécontent</option>
+                    <option value="other">Très mécontent</option>
+                </select>
+            </div>
+        </div>
+        <div class="rowTab">
+            <div class="labels">
+                <label>* Quand avez vous voyager avec notre company pour la derniere fois ?</label>
+            </div>
+            <div class="rightTab">
+                <ul style="list-style: none;">
+                    <li class="radio"><label>- 1 ans<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+                    <li class="radio"><label>entre 1 et 3 ans<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+                    <li class="radio"><label>plus de 3 ans<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rowTab">
+            <div class="labels">
+                <label for="like-most">Qu'est-ce vous aimez le plus dans notre company ?</label>
+            </div>
+            <div class="rightTab">
+                <select id="like-most"
+                        name="likeMost" class="dropdown">
+                    <option disabled selected value>Selectionnez une réponse</option>
+                    <option value="prix">Les prix</option>
+                    <option value="destinations">La multitude de destinations</option>
+                    <option value="Leconfort">Le confort de nos avions</option>
+                    <option value="Notrepersonnel">Notre personnel</option>
+                </select>
+            </div>
+        </div>
+        <div class="rowTab">
+            <div class="labels">
+                <label for="comments">Vous voulez nous faire part de vos observations (positives/négatives)</label>
+            </div>
+            <div class="rightTab">
+                <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Ecrivez ici ... "></textarea>
+            </div>
+        </div>
+        <button id="submit" type="submit">Envoyer</button>
+    </form>
+</div>
